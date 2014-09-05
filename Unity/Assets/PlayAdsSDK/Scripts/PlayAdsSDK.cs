@@ -23,12 +23,15 @@ public class PlayAdsSDK : MonoBehaviour
 	private static bool showLoadingScreen = false;
 	private static AdType currentType = AdType.Smart;
 
+	private static bool comesFromBackground = true;
 	private static bool initializing = false;
 	private static AdType waitingType;
 
-	private static string waitingAction = "";
 	private const string ACTION_CACHE	= "Cache";
 	private const string ACTION_SHOW 	= "Show";
+	private const string ACTION_NONE 	= "";
+	private static string waitingAction = "";
+	
 
 	#region --- PUBLIC ---
 	
@@ -54,10 +57,29 @@ public class PlayAdsSDK : MonoBehaviour
 			}
 		}
 	}
+
 	private void Awake()
 	{
 		name = INSTANCE_NAME;
 		DontDestroyOnLoad(transform.gameObject);
+		PlayAdsSDK.Start(ACTION_NONE, currentType);
+	}
+
+	private void OnApplicationPause(bool paused)
+	{
+		if(!paused && comesFromBackground)
+		{
+			bool alreadyInitialized = PlayAdsSDK.SDKReady;
+			PlayAdsSDK.SDKReady = false;
+
+			string currentAction = ACTION_NONE;
+			if(alreadyInitialized)
+			{
+				currentAction = ACTION_CACHE;
+			}
+
+			PlayAdsSDK.Start(currentAction, currentType);
+		}
 	}
 
 	#endregion
@@ -83,7 +105,7 @@ public class PlayAdsSDK : MonoBehaviour
 			appID = PlayAdsSDKSettings.AndroidAppID;
 			secretToken = PlayAdsSDKSettings.AndroidSecretToken;
 			#endif
-			
+
 			PlayAdsSDK.PlayAdsSDKStart(appID, secretToken, INSTANCE_NAME);
 		}
 	}
@@ -102,6 +124,7 @@ public class PlayAdsSDK : MonoBehaviour
 			PlayAdsSDK.Start(ACTION_CACHE, adType);
 			return;
 		}
+
 		PlayAdsSDK.PlayAdsSDKCache(PlayAdsSDK.GetTypeString(adType));
     }
 
@@ -135,6 +158,8 @@ public class PlayAdsSDK : MonoBehaviour
 			PlayAdsSDK.Start(ACTION_SHOW, adType);
 			return;
 		}
+
+		PlayAdsSDK.comesFromBackground = false;
 		PlayAdsSDK.PlayAdsSDKShow(PlayAdsSDK.GetTypeString(adType), PlayAdsSDK.showLoadingScreen);
     }
 
@@ -264,7 +289,7 @@ public class PlayAdsSDK : MonoBehaviour
 	private void AdFailedCallback(string error)
 	{
 		PlayAdsSDK.IsAdReady = false;
-
+		PlayAdsSDK.comesFromBackground = true;
 		if(AdFailed != null)
 		{
 			AdFailed(error);
@@ -274,6 +299,7 @@ public class PlayAdsSDK : MonoBehaviour
 	private void AdClosedCallback(string message)
 	{
 		PlayAdsSDK.IsAdReady = false;
+		PlayAdsSDK.comesFromBackground = true;
 
 		if(AdClosed != null)
 		{

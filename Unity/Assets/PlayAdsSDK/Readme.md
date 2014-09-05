@@ -1,1 +1,1 @@
-PlayAdsSDK V4.0.0 b1016
+PlayAdsSDK V4.0.5 b1019
