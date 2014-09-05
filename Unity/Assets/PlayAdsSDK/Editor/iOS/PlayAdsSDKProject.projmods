@@ -1,0 +1,39 @@
+{
+    "group": "PlayAdsSDK",
+    "libs": [
+    ],
+    "frameworks": [
+        "ImageIO.framework",
+        "SystemConfiguration.framework",
+        "QuartzCore.framework",
+        "CoreTelephony.framework",
+        "CoreGraphics.framework",
+        "AdSupport.framework",
+        "StoreKit.framework",
+        "AVFoundation.framework",
+        "Security.framework",
+        "UIKit.framework",
+        "Foundation.framework"
+    ],
+    "headerpaths": [
+        "Library/"
+    ],
+    "files": [
+        "Library/libPlayAdsSDK.a",
+        "Library/PlayAds.bundle",
+        "Library/PlayAdsSDK.h",
+        "PlayAdsSDKWrapper.h",
+        "PlayAdsSDKWrapper.mm"
+    ],
+    "folders": [
+    ],
+    "excludes": [
+        "^.*.meta$",
+        "^.*.mdown$"
+    ],
+    "compiler_flags": [
+    ],
+    "linker_flags": [
+        "-ObjC"
+    ]
+}

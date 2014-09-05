@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <dimen name="al_slot_machine_top_margin">60dp</dimen>
+    <dimen name="al_slot_machine_title_width">300dp</dimen>
+    
+    <dimen name="al_slot_machine_icon_size">50dp</dimen>
+    <dimen name="al_slot_machine_icon_spacing">5dp</dimen>
+    
+    <dimen name="al_slot_machine_wheels_top_margin">50dp</dimen>
+
+</resources>

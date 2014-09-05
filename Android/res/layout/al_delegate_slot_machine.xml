@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/al_slot_machine_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/al_slots_frame"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/slots_info_bar"
+            android:layout_width="@dimen/al_slot_machine_title_width"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/al_slot_machine_top_margin"
+            android:background="@drawable/al_slots_status_shape"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/al_slots_text_color"
+            android:textIsSelectable="false"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/al_slot_machine_wheels_top_margin" >
+
+            <com.applift.playads.ui.widget.SlotWheelView
+                android:id="@+id/view_wheel_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <com.applift.playads.ui.widget.SlotWheelView
+                android:id="@+id/view_wheel_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/al_slot_machine_wheel_spacing" />
+
+            <com.applift.playads.ui.widget.SlotWheelView
+                android:id="@+id/view_wheel_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/al_slot_machine_wheel_spacing" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/al_slot_machine_side_margin"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/view_bulb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/al_slot_machine_side_margin"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/view_bulb_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+
+            <ImageView
+                android:id="@+id/view_bulb_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/al_bulb" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_spin"
+            android:layout_width="@dimen/al_slot_machine_button_width"
+            android:layout_height="@dimen/al_slot_machine_button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/al_slot_machine_button_bottom_margin"
+            android:background="@drawable/al_btn_rounded"
+            android:textAllCaps="true"
+            android:textColor="@color/al_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/al_view_activity_overlay" />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_game_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/al_game_row_padding" >
+
+    <ImageView
+        android:id="@+id/row_game_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/al_game_row_padding" />
+
+    <TextView
+        android:id="@+id/row_game_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/row_game_image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/al_dark_grey"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/row_game_price"
+        style="@style/AL_CurrentPriceStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/al_rectangular_background"
+        android:textAllCaps="true" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <dimen name="al_slot_machine_top_margin">110dp</dimen>
+    <dimen name="al_slot_machine_side_margin">20dp</dimen>
+    
+    <dimen name="al_slot_machine_title_width">500dp</dimen>
+
+    <dimen name="al_slot_machine_icon_size">150dp</dimen>
+    <dimen name="al_slot_machine_icon_spacing">15dp</dimen>
+    
+    <dimen name="al_slot_machine_button_width">172dp</dimen>
+    <dimen name="al_slot_machine_button_height">56dp</dimen>
+    <dimen name="al_slot_machine_button_bottom_margin">20dp</dimen>
+    
+    <dimen name="al_scratch_screen_hole_radius">60dp</dimen>
+    
+    <dimen name="al_memory_cell_size">150dp</dimen>
+
+</resources>

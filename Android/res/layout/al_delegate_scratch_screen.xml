@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.applift.playads.ui.widget.BackPromoView
+        android:id="@+id/view_scratch_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.applift.playads.ui.widget.ScratchImageView
+        android:id="@+id/view_scratch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/al_btn_close" />
+
+</RelativeLayout>

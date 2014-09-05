@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <bool name="seven_inch">false</bool>
+    <bool name="ten_inch">false</bool>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <dimen name="al_slot_machine_title_width">400dp</dimen>
+    
+    <dimen name="al_slot_machine_icon_size">100dp</dimen>
+    <dimen name="al_slot_machine_icon_spacing">10dp</dimen>
+    
+    <dimen name="al_scratch_screen_hole_radius">45dp</dimen>
+    
+    <dimen name="al_memory_cell_size">125dp</dimen>
+
+</resources>

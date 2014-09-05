@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/al_memory_backgrnd" >
+
+    <GridView
+        android:id="@+id/al_memory_game_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnWidth="@dimen/al_memory_cell_size"
+        android:horizontalSpacing="2dp"
+        android:listSelector="@null"
+        android:numColumns="4"
+        android:stretchMode="none"
+        android:verticalSpacing="2dp" />
+
+    <TextView
+        android:id="@+id/al_memory_game_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/al_white_transparent"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/al_view_activity_overlay" />
+
+</RelativeLayout>
