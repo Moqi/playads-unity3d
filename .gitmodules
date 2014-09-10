@@ -1,0 +1,6 @@
+[submodule "Unity/Assets/PlayAdsSDK/Editor/Android/Library"]
+	path = Unity/Assets/PlayAdsSDK/Editor/Android/Library
+	url = git@github.com:applift/playads-android.git
+[submodule "Unity/Assets/PlayAdsSDK/Editor/iOS/Library"]
+	path = Unity/Assets/PlayAdsSDK/Editor/iOS/Library
+	url = git@github.com:applift/playads-ios.git
